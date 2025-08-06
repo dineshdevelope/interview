@@ -3,10 +3,10 @@ import dotenv from "dotenv";
 import cors from "cors";
 import { connectDB } from "./config/db.js";
 import userRoutes from "./routes/userRoutes.js";
+dotenv.config();
 const PORT = process.env.PORT || 3000;
 connectDB();
 const app = express();
-dotenv.config();
 app.use(
   cors({
     origin: [
