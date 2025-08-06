@@ -7,7 +7,10 @@ const PORT = process.env.PORT || 3000;
 connectDB();
 const app = express();
 dotenv.config();
-app.use(cors());
+app.use(cors([
+  https://interview-indol-three.vercel.app,
+  "http://localhost:5173",
+]));
 app.use(express.json());
 app.use("/api/users", userRoutes);
 app.listen(PORT, () => {
